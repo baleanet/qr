@@ -1,33 +1,27 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
 
     <title>QR Scan - Balea NET</title>
-
     <script src="jquery.min.js"></script>
-
     <script src="instascan.min.js"></script>
-<style>
-video {
-    position: absolute;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwcHgiPgogIDxwYXRoIGQ9Ik0yNSwyIEwyLDIgTDIsMjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmVkIiBzdHJva2Utd2lkdGg9IjEiIC8+CiAgPHBhdGggZD0iTTIsNzUgTDIsOTggTDI1LDk4IiBmaWxsPSJub25lIiBzdHJva2U9InJlZCIgc3Ryb2tlLXdpZHRoPSIxIiAvPgogIDxwYXRoIGQ9Ik03NSw5OCBMOTgsOTggTDk4LDc1IiBmaWxsPSJub25lIiBzdHJva2U9InJlZCIgc3Ryb2tlLXdpZHRoPSIxIiAvPgogIDxwYXRoIGQ9Ik05OCwyNSBMOTgsMiBMNzUsMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZWQiIHN0cm9rZS13aWR0aD0iMSIgLz4KPC9zdmc+) center no-repeat;
-    background-size: 40%;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-    margin: auto;
-    border: 3px solid green;
-}
-</style>
+    <link href="qr.css" rel="stylesheet">
 </head>
 
 <body>
-    <video id="preview"></video>
-
-
+<header>
+  <div class="overlay"></div>
+<video id="preview"></video>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3">BARCODE SCANNER</h1>
+        <p class="display-2">Arahkan QR Code pada vouhcer Anda.</p>
+        <p>Powered by Balea NET</p>
+      </div>
+    </div>
+  </div>
+</header>
     <script type="text/javascript">
       let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 100, mirror: false });
       scanner.addListener('scan', function (content) {
@@ -37,9 +31,5 @@ video {
 scanner.start(cameras[1]);
       })
     </script>
-
-
-
 </body>
-
 </html>
