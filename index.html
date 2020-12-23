@@ -6,14 +6,22 @@
 
     <title>QR Scan - Balea NET</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery.min.js"></script>
 
     <script src="instascan.min.js"></script>
-
+<style>
+.parent{
+background: url('scan-icon.gif') no-repeat center;
+ position: absolute;
+ display:block;
+  top: 0;
+  left: 0;
+  }
+</style>
 </head>
 
 <body>
-    <video id="preview" class="p-1 border" style="width:100%;"></video>
+    <video id="preview" class="parent" style="width:100%;"></video>
     <script type="text/javascript">
       let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 100, mirror: false });
 
