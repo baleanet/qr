@@ -36,7 +36,7 @@ header .overlay {
   background-color: black;
   opacity: 0.5;
   z-index: 1;
-      background: url('scan.gif') no-repeat center;
+      background: url('/scan.gif') no-repeat center;
     background-size: 50%;
 }
 .display-3 {
